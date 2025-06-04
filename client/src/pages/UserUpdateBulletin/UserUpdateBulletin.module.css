@@ -1,0 +1,227 @@
+/* UserUpdateBulletin.module.css */
+.container {
+  max-width: 800px;
+  margin: 90px auto 30px;
+  padding: 0 20px;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.updateCard {
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+}
+
+.cardHeader {
+  padding: 24px 30px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.cardHeader h1 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 600;
+  color: #333;
+}
+
+.loadingContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 0;
+}
+
+.loader {
+  width: 40px;
+  height: 40px;
+  border: 3px solid #f3f3f3;
+  border-top: 3px solid #3498db;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 16px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.errorContainer {
+  background-color: #fff3f3;
+  border: 1px solid #ffcdd2;
+  border-radius: 8px;
+  padding: 24px;
+  margin: 30px;
+  text-align: center;
+  color: #d32f2f;
+}
+
+.errorActions {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.retryButton, .backButton {
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.retryButton {
+  background-color: #d32f2f;
+  color: white;
+  border: none;
+}
+
+.retryButton:hover {
+  background-color: #b71c1c;
+}
+
+.backButton {
+  background-color: #f8f9fa;
+  color: #495057;
+  border: 1px solid #ddd;
+}
+
+.backButton:hover {
+  background-color: #e9ecef;
+}
+
+.successMessage {
+  background-color: #e8f5e9;
+  border: 1px solid #c8e6c9;
+  border-radius: 8px;
+  padding: 16px;
+  margin: 30px 30px 0;
+  color: #2e7d32;
+  text-align: center;
+  font-weight: 500;
+}
+
+.formContainer {
+  padding: 30px;
+}
+
+.bulletinForm {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+}
+
+.formGroup label {
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 8px;
+  font-size: 15px;
+}
+
+.contentTextarea {
+  padding: 16px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 15px;
+  resize: vertical;
+  min-height: 120px;
+  font-family: inherit;
+  transition: all 0.2s ease;
+}
+
+.contentTextarea:focus {
+  outline: none;
+  border-color: #3498db;
+  box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
+}
+
+.formInput {
+  padding: 12px 16px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 15px;
+  background-color: #f8f9fa;
+  color: #6c757d;
+  cursor: not-allowed;
+}
+
+.formActions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.cancelButton, .saveButton {
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.cancelButton {
+  background-color: #f8f9fa;
+  color: #495057;
+  border: 1px solid #ddd;
+}
+
+.cancelButton:hover {
+  background-color: #e9ecef;
+}
+
+.saveButton {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  box-shadow: 0 2px 6px rgba(52, 152, 219, 0.3);
+}
+
+.saveButton:hover {
+  background-color: #2980b9;
+  box-shadow: 0 4px 8px rgba(52, 152, 219, 0.4);
+}
+
+.saveButton:disabled {
+  background-color: #a0cfee;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+  .container {
+    padding: 0 15px;
+    margin-top: 80px;
+  }
+  
+  .cardHeader {
+    padding: 20px;
+  }
+  
+  .cardHeader h1 {
+    font-size: 20px;
+  }
+  
+  .formContainer {
+    padding: 20px;
+  }
+  
+  .formActions {
+    flex-direction: column;
+  }
+  
+  .cancelButton, .saveButton {
+    width: 100%;
+  }
+}
